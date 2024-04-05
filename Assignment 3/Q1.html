@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <link rel="stylesheet" href="Q1.css">
+</head>
+
+<body>
+    <table border="1" style="width: 100%;height: 100%;">
+        <tr>
+            <td style="width: 50%;">
+                <video src="video.mp4" type="video/mp4" controls style="width: 100%;"></video>
+            </td>
+            <form>
+                <td>
+                    <table border="1" style="height: 100%; width: 100%;">
+                        <tr>
+                            <td class="header">Name:</td>
+                            <td><input type="text" placeholder="Enter Name"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">BirthDate:</td>
+                            <td> <input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">Email:</td>
+                            <td><input type="email" placeholder="abc@example.com"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">Address</td>
+                            <td style="width: 100%;">
+                                <select id="state">
+                                    <option value="state" hidden>State</option>
+                                    <option value="state">Maharashtra</option>
+                                    <option value="state">Goa</option>
+                                    <option value="state">MP</option>
+                                    <option value="state">UP</option>
+                                </select>
+                                <select id="district">
+                                    <option value="district" hidden>District</option>
+                                    <option value="district">Pune</option>
+                                    <option value="district">Nashik</option>
+                                    <option value="district">Dhule</option>
+                                    <option value="district">Nagpur</option>
+                                </select>
+                                <select id="city">
+                                    <option value="city" hidden>City</option>
+                                    <option value="city">Pune</option>
+                                    <option value="city">Bhosri</option>
+                                    <option value="city">Deopur</option>
+                                    <option value="city">Malegaon</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="header">Gender:</td>
+                            <td>
+                                <table border="1" style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td style="width: 50%; height: 100%">
+                                            <input type="radio" name="gender" />Male
+                                        </td>
+                                        <td style="width: 50%; height: 100%">
+                                            <input type="radio" name="gender" />Female
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        <tr>
+                            <td class="header">Upload Photo:</td>
+                            <td><input type="file" id="photo" value="Browse your photo"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">Select your Course:</td>
+                            <td>
+                                <select id="Course">
+                                    <option value="Course" hidden>Course</option>
+                                    <option value="Course">DMC</option>
+                                    <option value="Course">DBDA</option>
+                                    <option value="Course">DAC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="justify-content: space-between; text-align: center; padding: 5px;">
+                                <input type="button" value="Register" id="submit"
+                                    style="margin-right: 25px; width: auto;">
+                                <input type="button" value="Clear" id="clear" style="margin-left: 25px; width: auto;">
+                            </td>
+                        </tr>
+        </tr>
+    </table>
+    </td>
+    </form>
+    </tr>
+    </table>
+</body>
+
+</html>
