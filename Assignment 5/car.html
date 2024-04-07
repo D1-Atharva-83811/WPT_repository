@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+</head>
+
+<body>
+    <div id="mydiv" style="padding: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;">
+        <img src="car.jpg" alt="car" style="height: 100px; width: 100px; margin: 0px;">
+    </div>
+    <div style="height: 50px;
+    width: 400px; 
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    top: 72px;"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="button" value="move" id="move" onclick="start()">
+    <input type="button" value="stop" id="stop" onclick="stop()">
+    <table border="1">
+        <tr>
+            <td style="width: 50%;">X-axis:</td>
+            <td id="xaxis"></td>
+        </tr>
+        <tr>
+            <td>Y-axis</td>
+            <td id="yaxis"></td>
+        </tr>
+    </table>
+    <script>
+        var x = 0;
+        var y = 0;
+        var o = 1;
+        var queue = new Array;
+        function start() {
+            var intervalId = setInterval(move, 60);
+            queue.push(intervalId);
+        }
+        function stop() {
+            var intervalId = queue.pop();
+            clearInterval(intervalId);
+        }
+        function move() {
+            var posiX = document.getElementById("mydiv");
+            if (x < 400) {
+                x = x + 5;
+                posiX.style.left = x + "px";
+                var xaxis = document.getElementById("xaxis");
+                xaxis.innerText = x;
+            }
+            else {
+                posiX.style.rotate = "45deg";
+                if (x < 500 && y < 250) {
+                    x = x + 2;
+                    posiX.style.left = x + "px";
+                    var xaxis = document.getElementById("xaxis");
+                    xaxis.innerText = x;
+                    y = y + 5;
+                    posiX.style.top = y + "px";
+                    var yaxis = document.getElementById("yaxis");
+                    yaxis.innerText = y;
+                    o = o - 0.02;
+                    posiX.style.opacity = o;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
